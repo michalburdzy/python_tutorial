@@ -1,0 +1,10 @@
+{% if lista_pytan %}
+<h2>Pytania: </h2>
+<ul>
+  {% for p in lista_pytan %}
+  <li>{{p.text_pytania}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Nie ma jeszcze zadnych pytan</p>
+{% endif %}

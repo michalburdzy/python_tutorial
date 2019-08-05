@@ -16,6 +16,12 @@ class Pytanie(models.Model):
     def __str__(self):
         return self.text_pytania
 
+    class Meta:
+        ordering = (['-data_publikacji'])
+
+    def __unicode__(self):
+        return unicode(self.text_pytania)
+
 
 class Odpowiedz(models.Model):
     pytanie = models.ForeignKey(Pytanie, on_delete=models.CASCADE)
